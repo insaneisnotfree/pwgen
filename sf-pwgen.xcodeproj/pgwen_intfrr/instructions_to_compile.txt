@@ -1,0 +1,12 @@
+ 4206  git clone git@github.com:insaneisnotfree/pwgen.git
+ 4207  cd sf-pwgen.xcodeproj
+ 4208  cd project.xcworkspace
+ 4209  mkdir pgwen_intfrr
+ 4210  cd pgwen_intfrr
+ 4211  cp ../pwgen/SFPasswordAssistant.h .
+ 4212  cp ../pwgen/sf-pwgen.m .
+ 4213  gcc sf-pwgen.m -lobjc -m32 -o sf-pwgen
+ 4214  gcc sf-pwgen.m -lobjc -std=c99 -framework SystemConfiguration -framework CoreFoundation -framework Foundation -o sf-pwgen
+ 4215  gcc sf-pwgen.m -lobjc -o sf-pwgen
+ 4216  gcc sf-pwgen.m -lobjc -std=c99 -framework SystemConfiguration -framework CoreFoundation -framework Foundation -framework SecurityFoundation -o sf-pwgen
+ 4217  ./sf-pwgen
